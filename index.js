@@ -24,8 +24,8 @@ class Block extends Component {
     <Animated.View
       style = { this.props.style }
       onLayout = { this.props.onLayout }
-      pointerEvents={this.props.pointerEvents}
       {...this.props.panHandlers}
+      pointerEvents={this.props.pointerEvents}
     >
       <TouchableWithoutFeedback
         style          = {{ flex: 1 }}
@@ -49,9 +49,9 @@ class SortableGrid extends Component {
 
     render = () =>
       <Animated.View
-        pointerEvents={this.props.pointerEvents}
         style={ this._getGridStyle() }
         onLayout={this.assessGridSize}
+        pointerEvents={this.props.pointerEvents}
       >
         { this.state.gridLayout &&
           this.items.map( (item, key) =>
@@ -542,7 +542,7 @@ class SortableGrid extends Component {
 
   _getDeletionView = (key) => {
     if (this.state.deleteModeOn)
-      return <Image style={ this._getImageDeleteIconStyle(key) } source={require('~/assets/trash.png')} />
+      return <Image style={ this._getImageDeleteIconStyle(key) } source={require('./assets/trash.png')} />
   }
 
   _getItemWrapperStyle = (key) => [
