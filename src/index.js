@@ -539,7 +539,7 @@ class SortableGrid extends Component {
 
   _getDeletionView = (key) => {
     if (this.state.deleteModeOn)
-      return <Image style={ this._getImageDeleteIconStyle(key) } source={require('./assets/trash.png')} />
+      return <Image style={ this._getImageDeleteIconStyle(key) } source={require('~/assets/trash.png')} />
   }
 
   _getItemWrapperStyle = (key) => [
