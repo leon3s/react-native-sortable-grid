@@ -49,7 +49,8 @@ var Block = function (_Component) {
         _reactNative.Animated.View,
         _extends({
           style: _this.props.style,
-          onLayout: _this.props.onLayout
+          onLayout: _this.props.onLayout,
+          pointerEvents: _this.props.pointerEvents
         }, _this.props.panHandlers),
         _react2.default.createElement(
           _reactNative.TouchableWithoutFeedback,
@@ -92,6 +93,7 @@ var SortableGrid = function (_Component2) {
       return _react2.default.createElement(
         _reactNative.Animated.View,
         {
+          pointerEvents: _this2.props.pointerEvents,
           style: _this2._getGridStyle(),
           onLayout: _this2.assessGridSize
         },
@@ -101,6 +103,7 @@ var SortableGrid = function (_Component2) {
             {
               key: key,
               style: _this2._getBlockStyle(key),
+              pointerEvents: _this2.props.pointerEvents,
               onLayout: _this2.saveBlockPositions(key),
               panHandlers: _this2._panResponder.panHandlers,
               delayLongPress: _this2.dragActivationTreshold,
